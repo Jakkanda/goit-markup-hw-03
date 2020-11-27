@@ -13,12 +13,25 @@ body {
   background-color: #ffffff;
 }
 
-body a {
+a {
   text-decoration: none;
 }
 
-body li {
+ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p { 
+  padding: 0;
+  margin: 0;
 }
 
 /*================================================COMPONENTS===============================================*/
