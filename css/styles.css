@@ -6,15 +6,6 @@
   --accent-color: #2196f3;
 }
 
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
 /*================================================BODY=================================================*/
 body {
   font-family: var(--main-font);
@@ -26,7 +17,8 @@ a {
   text-decoration: none;
 }
 
-ul {
+ul,
+ol {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -39,8 +31,15 @@ h4,
 h5,
 h6,
 p {
-  padding: 0;
   margin: 0;
+}
+
+img {
+  display: block;
+}
+
+.address {
+  font-style: normal;
 }
 
 /*================================================COMPONENTS===============================================*/
@@ -54,10 +53,50 @@ p {
   color: var(--main-text-color);
 }
 
-/*================================================HEADER===============================================*/
 .container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/*================================================HEADER===============================================*/
+.header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+.header .container {
   display: flex;
-  width: 1970px;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.contact-list {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header .logo {
+  margin-right: 93px;
+}
+
+.site-nav-list-item:not(:last-child),
+.contact-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/*.container {
+  display: flex;
+  width: 2000px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
@@ -90,12 +129,12 @@ p {
 
 .contact-list-item:last-child {
   margin-right:0;
-}
+}*/
 
 .logo {
-  padding-top: 24px;
+  /*padding-top: 24px;
   padding-bottom: 25px; 
-  margin-right: 93px;
+  margin-right: 93px;*/
 
   font-family: var(--secondary-font);
   font-weight: 700;
@@ -141,10 +180,20 @@ p {
 
 /*======================================================HERO====================================*/
 .hero {
+  padding: 200px 252px;
   background-color: #2f303a;
 }
 
+.hero .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .hero-title {
+  width: 100%;
+  margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -155,6 +204,11 @@ p {
 }
 
 .button {
+  min-width: 200px;
+  padding: 10px 32px;
+  border-radius: 4px;
+  cursor: pointer;
+
   font-family: var(--main-font);
   font-weight: 700;
   font-size: 16px;
@@ -166,7 +220,18 @@ p {
 }
 
 /*======================================================FEATURES====================================*/
+.section-features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 
+.features {
+  display: flex;
+}
+
+.features-item:not(:last-child) {
+  margin-right: 30px;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -182,6 +247,8 @@ p {
 }
 
 .features-title {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -199,11 +266,44 @@ p {
 }
 
 /*=====================================================WHAT WE ARE DOING====================================*/
+.section-works {
+  padding-bottom: 94px;
+}
 
+.gallery-list {
+  display: flex;
+  margin-top: 50px;
+}
+
+.illustration:not(:last-child) {
+  margin-right: 30px;
+}
 /*=====================================================OUR TEAM====================================*/
 
 .section-team {
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: #f5f4fa;
+}
+
+.employees-list {
+  display: flex;
+  margin-top: 50px;
+}
+
+.employees-list > .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.employees-list > .item {
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.description-wrapper {
+  padding: 30px 0;
 }
 
 .employees-title {
@@ -216,6 +316,8 @@ p {
 }
 
 .employees-desc {
+  margin-top: 10px;
+
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -226,7 +328,15 @@ p {
 
 /*=====================================================FOOTER====================================*/
 .footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #000000;
+}
+.contacts-info {
+  margin-top: 20px;
+}
+.contacts-info > .item:not(:last-child) {
+  margin-bottom: 9px;
 }
 .footer-logo {
   font-family: var(--secondary-font);
@@ -239,10 +349,6 @@ p {
 
 .footer-logo > span {
   color: var(--accent-color);
-}
-
-.address {
-  font-style: normal;
 }
 
 .location {
