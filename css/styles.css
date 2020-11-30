@@ -293,7 +293,7 @@ img {
   background-color: #000000;
 }
 .contacts-info {
-  margin-top: 20px;
+  padding-top: 20px;
 }
 .contacts-info > .item:not(:last-child) {
   margin-bottom: 9px;
