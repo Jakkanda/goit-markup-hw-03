@@ -379,8 +379,7 @@ img {
 .examples-list-item {
   width: 370px;
   margin-right: 30px;
-  margin-bottom: 30px;
-  border: 1px solid #eeeeee;
+  margin-bottom: 30px; 
 }
 
 .examples-list-item:nth-child(3n) {
@@ -408,6 +407,7 @@ img {
 
 .examples-description-wrapper {
   padding: 20px 24px;
+  border: 1px solid #eeeeee;
 }
 
 .portfolio-main {
