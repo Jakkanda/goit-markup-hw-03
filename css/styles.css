@@ -337,12 +337,19 @@ img {
 
 .selector-list {
   display: flex;
-  margin-bottom: 34px;
+}
+
+.selector-list>.item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.selector-list-wrapper {
+  display: flex;
   justify-content: center;
+  margin-bottom: 34px;
 }
 
 .button-selector {
-  margin-right: 8px;
   padding: 6px 22px;
   border-radius: 4px;
   border: none;
